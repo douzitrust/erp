@@ -6,11 +6,27 @@
 
 {% block content %}
     <a href="{% url 'add_supplier' %}" class="btn btn-primary mb-3">Add Supplier</a>
-    <ul class="list-group">
-        {% for supplier in suppliers %}
-            <li class="list-group-item">
-                {{ supplier.name }} - {{ supplier.contact_person }}
-            </li>
-        {% endfor %}
-    </ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Contact Person</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for supplier in suppliers %}
+            <tr>
+                <td>{{ supplier.name }}</td>
+                <td>{{ supplier.contact_person }}</td>
+                <td>{{ supplier.phone_number }}</td>
+                <td>{{ supplier.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
+
+
+
