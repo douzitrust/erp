@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Supplier List{% endblock %}
+
+{% block header %}Supplier List{% endblock %}
+
+{% block content %}
+    <a href="{% url 'add_supplier' %}" class="btn btn-primary mb-3">Add Supplier</a>
+    <ul class="list-group">
+        {% for supplier in suppliers %}
+            <li class="list-group-item">
+                {{ supplier.name }} - {{ supplier.contact_person }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
