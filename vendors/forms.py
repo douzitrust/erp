@@ -1,12 +1,15 @@
 from django import forms
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 from .models import Supplier
 
 class SupplierForm(forms.ModelForm):
     class Meta:
         model = Supplier
-        fields = [
-            'name', 'contact_person', 'phone_number', 'email', 'address', 
-            'tax_id', 'company_registration_number', 'website', 
-            'payment_terms', 'credit_limit', 'bank_account_details', 
-            'notes', 'preferred_shipping_method', 'special_terms'
-        ]
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(SupplierForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.add_input(Submit('submit', 'Save'))
