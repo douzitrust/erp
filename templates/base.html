@@ -38,6 +38,52 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                       
+                         <!-- Dashboard Menu -->
+                         <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-home"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{% url 'supplier_list' %}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+
+                        <!-- HR Menu -->
+                         <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-address-card"></i>
+                                <p>
+                                    HR
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{% url 'supplier_list' %}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Employee List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'add_supplier' %}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Add Employee</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <!-- Inventory Menu -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -90,12 +136,12 @@
                                         <p>Supplier List</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="{% url 'add_supplier' %}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Add Supplier</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <!-- Purchases Menu -->
